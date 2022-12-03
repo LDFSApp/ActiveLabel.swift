@@ -10,7 +10,7 @@ import UIKit
 import ActiveLabel
 
 class ViewController: UIViewController {
-    
+    let emptyString = "\u{200B}"
     let label = ActiveLabel()
 
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         label.urlMaximumLength = 31
 
         label.customize { label in
-            label.text = "This is a post with #multiple #hashtags and a @userhandle. Links are also supported like" +
+            label.text = "This\(emptyString)#한글로도잘되는지a post with #multiple #hashtags and a @userhandle. Links are also supported like" +
             " this one: http://optonaut.co. Now it also supports custom patterns -> are\n\n" +
                 "Let's trim a long link: \nhttps://twitter.com/twicket_app/status/649678392372121601"
             label.numberOfLines = 0
